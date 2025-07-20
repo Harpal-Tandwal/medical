@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Medicine Suggester | STAVIAM Health Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(ellipse at center, #0f2027, #203a43, #2c5364);
+    }
+    .hologram-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 25px rgba(0, 255, 179, 0.2), 0 0 60px rgba(0, 255, 255, 0.1);
+    }
+    .hologram-navbar {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="hologram-navbar px-6 py-4 flex items-center justify-between shadow-md">
+    <div class="flex items-center space-x-4">
+      <img src="img/logo_1.jpg" alt="STAVIAM Logo" class="w-10 h-10 rounded-full">
+      <span class="text-cyan-300 text-xl font-semibold">STAVIAM AI Advisor</span>
+    </div>
+    <a href="index.html" class="text-cyan-400 hover:text-white transition">Back to Home</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="max-w-2xl mx-auto hologram-card rounded-2xl p-8 mt-10 mb-20">
+    <h2 class="text-2xl font-bold text-cyan-300 mb-6 text-center">AI-Powered Medicine Suggester</h2>
+
+    <form id="symptomForm" class="space-y-5">
+      <label class="block">
+        <span class="text-cyan-100 font-semibold">Describe your symptoms:</span>
+        <textarea id="symptoms" required rows="5" class="mt-1 w-full border border-cyan-500 bg-transparent rounded-md px-4 py-2 text-white focus:ring-2 focus:ring-cyan-400"></textarea>
+      </label>
+      <button type="submit"
+              class="bg-cyan-400 text-black px-6 py-2 rounded-lg hover:bg-cyan-300 transition font-semibold">
+        Suggest Medicine
+      </button>
+    </form>
+
+    <!-- Result -->
+    <div id="suggestionResult" class="mt-8 text-cyan-200 font-medium text-center"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-400 text-sm py-6 border-t border-gray-700">
+    © 2025 STAVIAM Health Care · AI Advisor Powered by Frontend Logic
+  </footer>
+
+  <!-- Script -->
+  <script>
+    const form = document.getElementById("symptomForm");
+    const resultBox = document.getElementById("suggestionResult");
+
+    const suggestions = [
+      { keywords: ["multivitamin", "fatigue", "energy", "weakness", "tired", "vitamin", "daily supplement", "low energy"], medicine: "STAVSTRONG" },
+      { keywords: ["digestion", "appetite", "gas", "bloating", "indigestion", "stomach discomfort", "enzyme", "digestion issues"], medicine: "GOOD MORNING Syrup" },
+      { keywords: ["fungal", "itch", "ringworm", "skin infection", "rash", "scaly", "athlete foot", "eczema", "irritation"], medicine: "XEROCLEAR FM-2 Cream" },
+      { keywords: ["immunity", "immune", "herbal syrup", "low immunity", "get sick often", "natural immune booster", "body resistance"], medicine: "STAVOVIT Syrup" },
+      { keywords: ["anemia", "iron", "hemoglobin", "fatigue", "low blood", "pale", "dizzy", "low energy", "blood deficiency"], medicine: "FERROVIAM XT" },
+      { keywords: ["liver", "hepatitis", "detox", "jaundice", "liver tonic", "fatty liver", "improve liver", "enzymes high"], medicine: "HEPA LV (HEPASYNC)" },
+      { keywords: ["acidity", "reflux", "stomach", "ulcer", "heartburn", "gastric", "acid", "burping", "sour taste"], medicine: "SH-40 Injection" },
+      { keywords: ["low hemoglobin", "b12", "iron deficiency", "anemia", "weak", "folic acid", "pregnancy supplement"], medicine: "FERONIUM XT" },
+      { keywords: ["pcos", "hormonal", "period", "fertility", "ovarian", "irregular period", "female health", "menstrual"], medicine: "LUNAR DS" }
+    ];
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const input = document.getElementById("symptoms").value.toLowerCase();
+      let found = "❗ We couldn't identify a suitable medicine. Please consult Staviam Store.";
+
+      for (let s of suggestions) {
+        if (s.keywords.some(keyword => input.includes(keyword))) {
+          found = `<strong>💊 Suggested STAVIAM Medicine:</strong><br>${s.medicine}`;
+          break;
+        }
+      }
+
+      resultBox.innerHTML = found;
+    });
+  </script>
+</body>
+</html>

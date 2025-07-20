@@ -1,0 +1,43 @@
+<!-- header.html -->
+<header class="bg-[#1b5e20] text-white px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center">
+      <img src="img/logo_1.jpg" alt="Logo" class="h-12">
+    </div>
+    <!-- Hamburger Menu Button -->
+    <button class="block sm:hidden text-white focus:outline-none" id="menu-btn">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+    <!-- Desktop Nav -->
+    <nav class="hidden sm:flex space-x-6">
+      <a href="index.html" class="bg-[#2e7d32] px-4 py-2 rounded hover:bg-[#388e3c]">Home</a>
+      <a href="products.html" class="bg-[#2e7d32] px-4 py-2 rounded hover:bg-[#388e3c]">Products</a>
+      <a href="about.html" class="bg-[#2e7d32] px-4 py-2 rounded hover:bg-[#388e3c]">About</a>
+      <a href="consult.html" class="bg-[#2e7d32] px-4 py-2 rounded hover:bg-[#388e3c]">Consult</a>
+      <a href="contact.html" class="bg-[#2e7d32] px-4 py-2 rounded hover:bg-[#388e3c]">Contact</a>
+    </nav>
+  </header>
+  
+  <!-- Mobile Dropdown Nav -->
+  <div id="mobile-nav" class="sm:hidden hidden flex-col space-y-4 bg-[#e0f2f1] px-6 py-4 text-[#1b5e20] shadow-md rounded-b-lg">
+    <a href="index.html" class="block text-lg font-semibold hover:text-[#388e3c]">Home</a>
+    <a href="products.html" class="block text-lg font-semibold hover:text-[#388e3c]">Products</a>
+    <a href="about.html" class="block text-lg font-semibold hover:text-[#388e3c]">About</a>
+    <a href="consult.html" class="block text-lg font-semibold hover:text-[#388e3c]">Consult</a>
+    <a href="contact.html" class="block text-lg font-semibold hover:text-[#388e3c]">Contact</a>
+  </div>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileNav = document.getElementById("mobile-nav");
+      if (menuBtn) {
+        menuBtn.addEventListener("click", () => {
+          mobileNav.classList.toggle("hidden");
+        });
+      }
+    });
+  </script>
+  

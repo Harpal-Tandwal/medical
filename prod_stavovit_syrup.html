@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STAVOVIT-2 | STAVIAM Health Care</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex-shrink-0 flex items-center">
+          <img src="img/logo_1.jpg" alt="STAVIAM Healthcare Logo" width="50px">
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
+          <a href="products.html" class="text-gray-700 hover:text-green-600 font-medium">Product</a>
+          <a href="consult.html" class="text-gray-700 hover:text-green-600 font-medium">Consult</a>
+          <a href="contact.html" class="text-gray-700 hover:text-green-600 font-medium">Contact</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2 text-gray-700 hover:text-green-600">Home</a>
+      <a href="products.html" class="block py-2 text-gray-700 hover:text-green-600">Product</a>
+      <a href="consult.html" class="block py-2 text-gray-700 hover:text-green-600">Consult</a>
+      <a href="contact.html" class="block py-2 text-gray-700 hover:text-green-600">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Product Info Section -->
+  <div class="max-w-6xl mx-auto px-6 py-10 bg-white shadow-md mt-6 rounded-xl">
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      <!-- Product Image -->
+      <div class="md:w-1/2 w-full">
+        <img src="img/stavovit-2.jpg" alt="STAVOVIT-2"
+             class="rounded-xl shadow-lg w-full h-auto object-cover max-h-[400px]">
+      </div>
+
+      <!-- Product Details -->
+      <div class="md:w-1/2 w-full space-y-4">
+        <h1 class="text-3xl font-bold text-green-800">STAVOVIT-2</h1>
+        <p class="text-gray-700">
+          STAVOVIT-2 is a multivitamin and multimineral capsule designed to promote overall health and well-being. It helps
+          in improving energy levels, boosting immunity, and maintaining metabolic health in adults.
+        </p>
+        <ul class="list-disc pl-5 text-gray-700">
+          <li>Daily essential multivitamin formula</li>
+          <li>Improves immunity and physical strength</li>
+          <li>Promotes energy production and metabolism</li>
+          <li>Ideal for general wellness in adults</li>
+        </ul>
+        <div class="text-green-700 text-xl font-semibold">₹135.00</div>
+        <a href="contact.html" class="inline-block bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded">
+          Enquire Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-[#1b5e20] text-white mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">STAVIAM Health Care</h3>
+        <p class="text-gray-300">
+          Your trusted medical store for quality healthcare products, expert advice, and 24/7 availability.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="./index.html" class="hover:text-green-300 transition">Home</a></li>
+          <li><a href="./products.html" class="hover:text-green-300 transition">Products</a></li>
+          <li><a href="./consult.html" class="hover:text-green-300 transition">Consult</a></li>
+          <li><a href="./contact.html" class="hover:text-green-300 transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
+        <p>Email: <a href="mailto:contact@staviamhealth.com" class="text-green-200 hover:underline">contact@staviamhealth.com</a></p>
+        <p>Phone: <span class="text-green-200">+91-98765-43210</span></p>
+        <p class="mt-2">Location: Mumbai, India</p>
+      </div>
+    </div>
+    <div class="bg-[#145a1c] text-center py-4 text-sm text-gray-300">
+      © 2025 STAVIAM Health Care. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
