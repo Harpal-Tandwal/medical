@@ -3,34 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FERONIUM XT | STAVIAM Health Care</title>
+  <title>STAVIAM Medical Store</title>
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
+</head> 
 <body class="bg-gray-100">
-
-  <!-- Navbar -->
   <nav class="bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
+      <div class="flex justify-between h-16">  
+        <!-- Logo -->
         <div class="flex-shrink-0 flex items-center">
-          <img src="img/logo_1.jpg" alt="STAVIAM Healthcare Logo" width="50px">
+            <img src="img/logo_1.jpg" alt="STAVIAM Healthcare Logo" width="50px">
         </div>
+
+        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8 items-center">
           <a href="index.html" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
           <a href="products.html" class="text-gray-700 hover:text-green-600 font-medium">Product</a>
           <a href="consult.html" class="text-gray-700 hover:text-green-600 font-medium">Consult</a>
           <a href="contact.html" class="text-gray-700 hover:text-green-600 font-medium">Contact</a>
         </div>
+
+        <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
           <button id="menu-toggle" class="text-gray-700 focus:outline-none">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16" />
+                d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
       </div>
     </div>
+
+    <!-- Mobile Menu -->
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
       <a href="index.html" class="block py-2 text-gray-700 hover:text-green-600">Home</a>
       <a href="products.html" class="block py-2 text-gray-700 hover:text-green-600">Product</a>
@@ -39,44 +44,64 @@
     </div>
   </nav>
 
-  <!-- Product Info Section -->
-  <div class="max-w-6xl mx-auto px-6 py-10 bg-white shadow-md mt-6 rounded-xl">
-    <div class="flex flex-col md:flex-row gap-8 items-start">
-      <!-- Product Image -->
-      <div class="md:w-1/2 w-full">
-        <img src=".img/feronium-xt (3).jpg" alt="FERONIUM XT Tablet"
-             class="rounded-xl shadow-lg w-full h-auto object-cover max-h-[400px]">
+   <!-- Two Column Responsive Section -->
+   <section class="flex flex-col md:flex-row items-center justify-center px-6 py-10 gap-10 max-w-7xl mx-auto">
+    
+   
+    
+    <!-- Text Content Section -->
+    <div class="md:w-1/2 w-full bg-white p-6 md:p-10 rounded-2xl shadow-lg">
+        <h2 class="text-3xl font-bold mb-4 text-green-800">Welcome to STAVIAM Medical Store</h2>
+        <div class="flex flex-col gap-6">
+          <!-- Store Info -->
+          <div>
+            <p class="text-gray-700 text-lg mb-4">
+              STAVIAM Medical Store is your one-stop destination for high-quality medicines and healthcare essentials.
+              We ensure timely access to prescription and over-the-counter medications, offering reliable customer service and pharmacist guidance.
+            </p>
+            <ul class="list-disc ml-6 text-gray-700 space-y-2">
+              <li>Certified pharmacists available for consultation</li>
+              <li>24/7 emergency medicine supply</li>
+              <li>Affordable generic alternatives</li>
+              <li>Vaccination & preventive health support</li>
+            </ul>
+          </div>
+  
+          <!-- Health Tips -->
+          <div>
+            <h3 class="text-xl font-semibold mb-3 text-green-700">Health Tips</h3>
+            <ul class="list-disc ml-6 text-gray-700 space-y-2">
+              <li>Stay hydrated and drink at least 8 glasses of water daily</li>
+              <li>Maintain a balanced diet rich in fruits and vegetables</li>
+              <li>Exercise regularly to keep your body active</li>
+              <li>Sleep at least 7-8 hours every night</li>
+              <li>Avoid self-medication—consult a pharmacist or doctor</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <!-- Product Details -->
-      <div class="md:w-1/2 w-full space-y-4">
-        <h1 class="text-3xl font-bold text-green-800">FERONIUM XT</h1>
-        <p class="text-gray-700">
-          FERONIUM XT is a comprehensive iron supplement formulated with Ferrous Bisglycinate, Zinc Bisglycinate, Cyanocobalamin (Vitamin B12), and Folic Acid. This combination ensures superior iron absorption, supports hemoglobin production, and enhances overall energy levels.
-        </p>
-        <ul class="list-disc pl-5 text-gray-700">
-          <li>Combats iron deficiency anemia effectively</li>
-          <li>Boosts immune function with Zinc Bisglycinate</li>
-          <li>Supports red blood cell formation with Vitamin B12 and Folic Acid</li>
-          <li>Gentle on the stomach with high bioavailability</li>
-        </ul>
-        <div class="text-green-700 text-xl font-semibold">₹299.00</div>
-        <a href="contact.html" class="inline-block bg-green-700 hover:bg-green-800 text-white px-6 py-2 rounded">
-          Enquire Now
-        </a>
+     <!-- Doctor Image Section -->
+     <div class="md:w-1/2 w-full">
+        <img src="img/DOCTOR_IMG_1.jpg" alt="Doctor" height="40px"
+             class="rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.15)] w-full object-cover max-h-[780px]">
       </div>
-    </div>
-  </div>
+  
 
-  <!-- Footer -->
-  <footer class="bg-[#1b5e20] text-white mt-12">
+  </section>
+  <!-- Fixed Footer -->
+ <!-- Footer Section -->
+<footer class="bg-[#1b5e20] text-white mt-12">
     <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+  
+      <!-- Branding -->
       <div>
         <h3 class="text-2xl font-bold mb-4">STAVIAM Health Care</h3>
         <p class="text-gray-300">
           Your trusted medical store for quality healthcare products, expert advice, and 24/7 availability.
         </p>
       </div>
+  
+      <!-- Quick Links -->
       <div>
         <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
         <ul class="space-y-2">
@@ -86,21 +111,28 @@
           <li><a href="./contact.html" class="hover:text-green-300 transition">Contact</a></li>
         </ul>
       </div>
+  
+      <!-- Contact Info -->
       <div>
         <h4 class="text-xl font-semibold mb-4">Contact Us</h4>
         <p>Email: <a href="mailto:contact@staviamhealth.com" class="text-green-200 hover:underline">contact@staviamhealth.com</a></p>
         <p>Phone: <span class="text-green-200">+91-98765-43210</span></p>
         <p class="mt-2">Location: Mumbai, India</p>
       </div>
+  
     </div>
+  
+    <!-- Bottom Bar -->
     <div class="bg-[#145a1c] text-center py-4 text-sm text-gray-300">
       © 2025 STAVIAM Health Care. All rights reserved.
     </div>
   </footer>
+  
 
   <script>
     const toggleButton = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+
     toggleButton.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
